@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho {
+    background-color: #05051F;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.animacao-digitacao {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    width: 0;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: digitar 5.5s steps(50, end) forwards, piscar 1s infinite;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes digitar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes piscar {
+    0% {
+        border-right-color: orange;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+    100% {
+        border-right-color: orange;
+    }
+}
+
+.animacao-digitacao p {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
